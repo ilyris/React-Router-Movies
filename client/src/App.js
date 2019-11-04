@@ -7,15 +7,14 @@ const App = () => {
   const [savedList, setSavedList] = useState( [] );
 
   const addToSavedList = movie => {
-    console.log('some stuff');
-    // return setSavedList( [...savedList, movie] );
+    return setSavedList( [...savedList, movie] );
   };
 
   return (
     <div>
       <SavedList list={savedList} />
       <Route exact path="/" component={MovieList}/>
-      <Route exact path="/movies/:id" render={props => <Movie {...props} addToListFunction={addToSavedList} /> }/>
+      <Route exact path="/movies/:id" render={props => <Movie {...props} addToSavedList={addToSavedList} /> }/>
     </div>
   );
 };

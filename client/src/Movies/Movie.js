@@ -49,7 +49,7 @@ const Movie = (props) => {
           </div>
         ))}
       </div>
-      <div className="save-button">Save</div>
+      <div onClick={saveMovie}className="save-button">Save</div>
     </div>
   );
 }
